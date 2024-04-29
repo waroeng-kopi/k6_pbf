@@ -31,10 +31,10 @@
               Nama Mobil
             </th>
             <th scope="col" class="px-6 py-3">
-              Penulis
+              Penyewa
             </th>
             <th scope="col" class="px-6 py-3">
-              Kategori
+              Jam sewa
             </th>
             <th scope="col" class="px-6 py-3">
               Action
@@ -42,81 +42,26 @@
           </tr>
         </thead>
         <tbody>
+          <?php foreach ($sewa as $row): ?>
           <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
             <th scope="row" class="px-6 py-4 font-medium text-gray-900 dark:text-white">
-              Teori dan Aplikasi C++ dengan Contoh Lebih dari 280 Source Code
+              <?= $row['sewaId'] ?>
             </th>
             <td class="px-6 py-4">
-              R.h. Sianipar
+              <?= $row['namaMobil'] ?>
             </td>
             <td class="px-6 py-4">
-              Komputer
+              <?= $row['penyewa'] ?>
+            </td>
+            <td>
+              <?= $row['jamSewa'] ?>
             </td>
             <td class="px-6 py-4 flex flex-row gap-x-1">
               <a href="#" class="font-medium py-2 px-3 bg-yellow-500 text-white rounded-lg hover:underline">Edit</a>
               <a href="#" class="font-medium py-2 px-3 bg-red-500 text-white rounded-lg hover:underline">Remove</a>
             </td>
           </tr>
-          <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-              Pemrograman Laravel
-            </th>
-            <td class="px-6 py-4">
-              Ade Rahmat Iskandar, Yono Suryadi
-            </td>
-            <td class="px-6 py-4">
-              Komputer
-            </td>
-            <td class="px-6 py-4 flex flex-row gap-x-1">
-              <a href="#" class="font-medium py-2 px-3 bg-yellow-500 text-white rounded-lg hover:underline">Edit</a>
-              <a href="#" class="font-medium py-2 px-3 bg-red-500 text-white rounded-lg hover:underline">Remove</a>
-            </td>
-          </tr>
-          <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-            Refactoring Improving the Design of Existing Code
-            </th>
-            <td class="px-6 py-4">
-              Martin Fowler, with Kent Beck
-            </td>
-            <td class="px-6 py-4">
-              Komputer
-            </td>
-            <td class="px-6 py-4 flex flex-row gap-x-1">
-              <a href="#" class="font-medium py-2 px-3 bg-yellow-500 text-white rounded-lg hover:underline">Edit</a>
-              <a href="#" class="font-medium py-2 px-3 bg-red-500 text-white rounded-lg hover:underline">Remove</a>
-            </td>
-          </tr>
-          <tr class="odd:bg-white odd:dark:bg-gray-900 even:bg-gray-50 even:dark:bg-gray-800 border-b dark:border-gray-700">
-            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-              Atomic Habits
-            </th>
-            <td class="px-6 py-4">
-              James Clear
-            </td>
-            <td class="px-6 py-4">
-              Life
-            </td>
-            <td class="px-6 py-4 flex flex-row gap-x-1">
-              <a href="#" class="font-medium py-2 px-3 bg-yellow-500 text-white rounded-lg hover:underline">Edit</a>
-              <a href="#" class="font-medium py-2 px-3 bg-red-500 text-white rounded-lg hover:underline">Remove</a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-              The Psychology of Money 
-            </th>
-            <td class="px-6 py-4">
-              Morgan Housel
-            </td>
-            <td class="px-6 py-4">
-              Economic
-            </td>
-            <td class="px-6 py-4 flex flex-row gap-x-1">
-              <a href="#" class="font-medium py-2 px-3 bg-yellow-500 text-white rounded-lg hover:underline">Edit</a>
-              <a href="#" class="font-medium py-2 px-3 bg-red-500 text-white rounded-lg hover:underline">Remove</a>
-            </td>
-          </tr>
+          <?php endforeach; ?>
         </tbody>
     </table>
 </div>
