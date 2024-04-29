@@ -6,8 +6,10 @@ use CodeIgniter\Model;
 
 class SewaModel extends Model
 {
-    protected $table      = 'tb_sewa';
-    protected $primaryKey = 'sewaId';
-
-    protected $allowedFields = ['sewaId', 'namaMobil', 'penyewa', 'jamSewa'];
+    protected $table            = 'tb_sewa';
+    protected $primaryKey       = 'sewaId';
+    protected $useAutoIncrement = true;
+    protected $returnType       = 'object';
+    protected $protectFields    = true;
+    protected $allowedFields    = ['namaMobil', 'penyewa', 'jamSewa'];
 }
