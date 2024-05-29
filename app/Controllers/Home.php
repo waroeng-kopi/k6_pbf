@@ -14,12 +14,14 @@ class Home extends BaseController
         return view('v_home', $data);
     }
 
-    public function sewa()
+    public function sewa($id=null)
     {
         $sewaModel = new SewaModel(); // Create instance of SewaModel
         $data = [
             'title' => 'Sewa Mobil',
-            'isi_sewa' => $sewaModel->findAll(), // Retrieve data from database
+            'isi_sewa' => $sewaModel->orderBy('sewaId DESC')->findAll(),
+            // Retrieve data from database
+            'sewa_obj' => $sewaModel->where('sewaId', $id)->first()
         ];
         return view('v_sewa', $data);
     }
@@ -32,4 +34,18 @@ class Home extends BaseController
         ];
         return view('v_mobil', $data);
     }
+
+    public function create()
+    {
+        $sewaModel = new SewaModel();
+        $data = [
+            'namaMobil' => $this->request->getVar('namaMobil'),
+            'penyewa' => $this->request->getVar('penyewa'),
+            'jamSewa' => $this->request->getVar('jamSewa'),
+        ];
+        $sewaModel->insert($data);
+        return $this->response->redirect(base_url('sewa'));
+    }
+
+    // public function 
 }

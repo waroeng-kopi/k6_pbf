@@ -11,5 +11,6 @@ class SewaModel extends Model
     protected $useAutoIncrement = true;
     protected $returnType       = 'object';
     protected $protectFields    = true;
+    
     protected $allowedFields    = ['namaMobil', 'penyewa', 'jamSewa'];
 }

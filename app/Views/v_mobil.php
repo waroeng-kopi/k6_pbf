@@ -2,7 +2,7 @@
 
 <main class="flex flex-row flex-wrap gap-5 min-h-screen m-5">
 
-<div class="mx-auto max-w-sm w-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+<div class="mx-auto max-w-sm w-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 slideanim">
   <a href="#">
     <img class="rounded-t-lg w-full" src="https://www.globaltransport.co.id/wp-content/uploads/2018/11/Toyota-Alphard-2010-%E2%80%93-2011.jpg" alt="" />
   </a>
@@ -40,7 +40,7 @@
   </div>
 </div>
 
-<div class="mx-auto max-w-sm w-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ">
+<div class="mx-auto max-w-sm w-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 slideanim">
   <a href="#">
     <img class="rounded-t-lg w-full" src="https://www.globaltransport.co.id/wp-content/uploads/2018/11/Toyota-Alphard-Transformer-.jpg" alt="" />
   </a>
@@ -78,7 +78,7 @@
   </div>
 </div>
 
-<div class="mx-auto max-w-sm w-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-70 ">
+<div class="mx-auto max-w-sm w-auto bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 slideanim">
   <a href="#">
     <img class="rounded-t-lg w-full" src="https://www.globaltransport.co.id/wp-content/uploads/2018/11/Toyota-Vellfire.jpg" alt="" />
   </a>

@@ -9,6 +9,13 @@ CREATE TABLE IF NOT EXISTS tb_sewa (
   PRIMARY KEY(sewaId)
 );
 
+CREATE TABLE IF NOT EXISTS tb_user (
+  user_id INT PRIMARY KEY AUTO_INCREMENT,
+  username VARCHAR(255) UNIQUE NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL
+);
+
 INSERT INTO tb_sewa (sewaId, namaMobil, penyewa, jamSewa) VALUES
 ('SW001', 'Toyota Avanza', 'John Doe', 4),
 ('SW002', 'Honda Civic', 'Jane Smith', 6),
@@ -30,3 +37,6 @@ INSERT INTO tb_sewa (sewaId, namaMobil, penyewa, jamSewa) VALUES
 ('SW018', 'Audi Q3', 'Ava Wilson', 7),
 ('SW019', 'Lexus NX', 'Ryan Moore', 8),
 ('SW020', 'Infiniti QX50', 'Isabella Thompson', 3);
+
+INSERT INTO tb_user (user_id, username, password, email) VALUES 
+(1, 'admin', 'rahasia', 'admin@gmail.com');
