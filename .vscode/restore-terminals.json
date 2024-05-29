@@ -1,0 +1,19 @@
+{
+  "artificialDelayMilliseconds": 700,
+  "keepExistingTerminalsOpen": false,
+  "runOnStartup": true,
+  "terminals": [
+    {
+      "splitTerminals": [
+        {
+          "name": "server",
+          "commands": ["","php spark serve --port 8082"]
+        },
+        {
+          "name": "main",
+          "commands": [""]
+        }
+      ]
+    }
+  ]
+}
